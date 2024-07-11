@@ -10,7 +10,8 @@ services:
       - "443:443"
     volumes:
       - ./websites:/websites
-      - ./nginx-conf:/etc/nginx/conf.d
+      - ./etc/nginx/conf.d:/etc/nginx/conf.d
+      - ./src:/usr/share/nginx/html
     depends_on:
       - php
     # PHP FPM Service
@@ -21,6 +22,7 @@ services:
     volumes:
       - ./websites:/websites
       - ./php-logging.conf:/usr/local/etc/php-fpm.d/zz-log.conf
+      - ./etc/php:/etc/php8
     depends_on:
       - mydb
     environment:
