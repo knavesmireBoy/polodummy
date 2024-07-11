@@ -1,9 +1,4 @@
-#FROM php:8-fpm-alpine3.14
-
-FROM php:fpm-alpine
-
-RUN apk add --no-cache $PHPIZE_DEPS
-RUN apk add --no-cache linux-headers
+FROM php:8-fpm-alpine3.14
 
 RUN apk update && apk upgrade
 
