@@ -2,7 +2,11 @@
 
 FROM php:fpm-alpine
 
+RUN apk add --no-cache $PHPIZE_DEPS
+RUN apk add --no-cache linux-headers
+
 RUN apk update && apk upgrade
+
 RUN apk add bash
 RUN apk add nginx
 RUN apk add php8 php8-fpm php8-opcache
