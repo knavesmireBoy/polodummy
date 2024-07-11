@@ -1,5 +1,5 @@
-FROM php:fpm-alpine
-
+#FROM php:fpm-alpine
+FROM php:8-fpm-alpine3.14
 RUN apk add --no-cache $PHPIZE_DEPS
 RUN apk add --no-cache linux-headers
 RUN pecl install xdebug 
