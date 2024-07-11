@@ -1,5 +1,5 @@
 <?php
-$name = 'bolt the doggie';
+$name = 'bolt';
 ?>
 
 <h1><?= "hello $name"; ?></h1>
