@@ -10,3 +10,5 @@ RUN apk add --no-cache mysql-client msmtp perl wget procps shadow libzip libpng 
 RUN docker-php-ext-install pdo pdo_mysql
 
 RUN sed -i '/#!\/bin\/sh/aecho "$(hostname -i)\t$(hostname) $(hostname).localhost" >> /etc/hosts' /usr/local/bin/docker-php-entrypoint
+
+EXPOSE 9000
