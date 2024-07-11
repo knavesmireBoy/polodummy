@@ -5,7 +5,7 @@ RUN apk add --no-cache linux-headers
 RUN pecl install xdebug 
 RUN docker-php-ext-enable xdebug 
 
-RUN apk add --no-cache mysql-client msmtp perl wget procps shadow libzip libpng libjpeg-turbo libwebp freetype icu icu-data-full
+RUN apk add --no-cache mysql-client msmtp perl wget procps shadow libzip libpng libjpeg-turbo libwebp freetype icu
 
 RUN docker-php-ext-install pdo pdo_mysql
 
