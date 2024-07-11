@@ -9,9 +9,9 @@ COPY /server/etc/nginx /etc/nginx
 COPY /server/etc/php /etc/php8
 #COPY src /usr/share/nginx/html
 COPY websites /websites
-RUN mkdir /var/run/php
+RUN mkdir /run/php
 EXPOSE 80
 #EXPOSE 443
 STOPSIGNAL SIGTERM
 #CMD ["/bin/bash", "-c", "php-fpm8 && chmod 777 /var/run/php/php8-fpm.sock && chmod 755 /usr/share/nginx/html/* && nginx -g 'daemon off;'"]
-CMD ["/bin/bash", "-c", "php-fpm8 && chmod 777 /var/run/php/php8-fpm.sock && chmod 755 /websites/default/public/* && nginx -g 'daemon off;'"]
+CMD ["/bin/bash", "-c", "php-fpm8 && chmod 777 /run/php/php8-fpm.sock && chmod 755 /websites/default/public/* && nginx -g 'daemon off;'"]
