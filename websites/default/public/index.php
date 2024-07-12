@@ -12,4 +12,5 @@ $today = 'Friday';
   </head>
   <body>
 <h2><?= "hello my name is $name, and today is $today"; ?></h2>
+<div><a href="resources/img/beatles.jpg"><img alt="beatles for sale" src="resources/img/beatles.jpg"</div>
 </body>
